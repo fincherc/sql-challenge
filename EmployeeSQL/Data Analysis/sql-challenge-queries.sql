@@ -1,6 +1,12 @@
 -- SQL Queries for Questions
 
 -- List the employee number, last name, first name, sex, and salary of each employee (2 points)
+SELECT 
+	emps.emp_no, emps.last_name, emps.first_name, emps.sex, sal.salary
+	FROM employees emps
+	LEFT JOIN salaries sal
+		ON emps.emp_no = sal.emp_no;
+		
 -- List the first name, last name, and hire date for the employees who were hired in 1986 (2 points)
 -- List the manager of each department along with their department number, department name, employee number, last name, and first name (2 points)
 -- List the department number for each employee along with that employee’s employee number, last name, first name, and department name (2 points)
