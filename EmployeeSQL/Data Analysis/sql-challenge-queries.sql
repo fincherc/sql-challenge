@@ -35,6 +35,21 @@ SELECT
 	;
 			
 -- List the department number for each employee along with that employee’s employee number, last name, first name, and department name (2 points)
+
+SELECT
+	de.dept_no, de.emp_no, e.last_name, e.first_name, d.dept_name
+	FROM
+		dept_emp de
+	LEFT JOIN
+		departments d
+		ON
+			d.dept_no = de.dept_no
+	LEFT JOIN
+		employees e
+		ON
+			e.emp_no = de.emp_no
+	;
+	
 -- List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B (2 points)
 -- List each employee in the Sales department, including their employee number, last name, and first name (2 points)
 -- List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name (4 points)
