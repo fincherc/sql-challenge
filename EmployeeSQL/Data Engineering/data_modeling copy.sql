@@ -3,8 +3,8 @@
 
 
 CREATE TABLE "departments" (
-    "dept_no" VARCHAR   NOT NULL,
-    "dept_name" VARCHAR   NOT NULL,
+    "dept_no" VARCHAR(5)   NOT NULL,
+    "dept_name" VARCHAR(50)   NOT NULL,
     CONSTRAINT "pk_departments" PRIMARY KEY (
         "dept_no"
      )
@@ -12,20 +12,20 @@ CREATE TABLE "departments" (
 
 CREATE TABLE "dept_emp" (
     "emp_no" INTEGER   NOT NULL,
-    "dept_no" VARCHAR   NOT NULL
+    "dept_no" VARCHAR(5)   NOT NULL
 );
 
 CREATE TABLE "dept_manager" (
-    "dept_no" VARCHAR   NOT NULL,
+    "dept_no" VARCHAR(5)   NOT NULL,
     "emp_no" INTEGER   NOT NULL
 );
 
 CREATE TABLE "employees" (
     "emp_no" INTEGER   NOT NULL,
-    "emp_title_id" VARCHAR   NOT NULL,
+    "emp_title_id" VARCHAR(50)   NOT NULL,
     "birth_date" DATE   NOT NULL,
-    "first_name" VARCHAR   NOT NULL,
-    "last_name" VARCHAR   NOT NULL,
+    "first_name" VARCHAR(50)   NOT NULL,
+    "last_name" VARCHAR(50)   NOT NULL,
     "sex" CHAR   NOT NULL,
     "hire_date" DATE   NOT NULL,
     CONSTRAINT "pk_employees" PRIMARY KEY (
@@ -39,8 +39,8 @@ CREATE TABLE "salaries" (
 );
 
 CREATE TABLE "titles" (
-    "title_id" VARCHAR   NOT NULL,
-    "title" VARCHAR   NOT NULL,
+    "title_id" VARCHAR(5)   NOT NULL,
+    "title" VARCHAR(50)   NOT NULL,
     CONSTRAINT "pk_titles" PRIMARY KEY (
         "title_id"
      )
